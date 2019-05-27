@@ -9,4 +9,5 @@
     <!-- Forgot Password -->
     <string name="info_enter_email">Please enter your email here</string>
     <string name="button_submit_email">Submit</string>
+    <string name="forgot_password">Forgot password?</string>
 </resources>
