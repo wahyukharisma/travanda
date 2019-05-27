@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Travanda</string>
+
+    <!-- Login -->
+    <string name="email_input">EMAIL</string>
+    <string name="password_input">PASSWORD</string>
+    <string name="button_login">LOGIN</string>
 </resources>

@@ -2,11 +2,20 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#FFFF00</color>
 
     <!-- Background -->
     <color name="loginBackground">#58afd0</color>
 
     <!-- Text -->
     <color name="textBlack">#000000</color>
+    <color name="textHintGrey">#6D6D6D</color>
+    <color name="textWhite">#FFFFFF</color>
+
+    <!-- Background Tint -->
+    <color name="tintBlack">#000000</color>
+
+    <!--Button Color -->
+    <color name="buttonLoginNormal">#FFDD00</color>
+    <color name="buttonLoginClicked">#EEDF78</color>
 </resources>
