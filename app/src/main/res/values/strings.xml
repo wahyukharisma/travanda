@@ -5,4 +5,8 @@
     <string name="email_input">EMAIL</string>
     <string name="password_input">PASSWORD</string>
     <string name="button_login">LOGIN</string>
+
+    <!-- Forgot Password -->
+    <string name="info_enter_email">Please enter your email here</string>
+    <string name="button_submit_email">Submit</string>
 </resources>
