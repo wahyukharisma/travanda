@@ -14,6 +14,7 @@
 
     <!-- Background Tint -->
     <color name="tintBlack">#000000</color>
+    <color name="link">#D5DBF7</color>
 
     <!--Button Color -->
     <color name="buttonLoginNormal">#FFDD00</color>
