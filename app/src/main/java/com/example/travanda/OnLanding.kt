@@ -10,5 +10,5 @@ class OnLanding : AppCompatActivity() {
         setContentView(R.layout.landing_scene)
     }
 
-    
+
 }
