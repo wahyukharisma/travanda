@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_signup.*
 class SignUp : AppCompatActivity() {
     lateinit var ref : DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
-        ref=FirebaseDatabase.getInstance().getReference("USERS")
+        ref=FirebaseDatabase.getInstance().getReference("users")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
         btn_signup.setOnClickListener {
