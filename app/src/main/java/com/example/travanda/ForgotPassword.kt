@@ -1,5 +1,6 @@
 package com.example.travanda
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.TextUtils
@@ -23,8 +24,12 @@ class ForgotPassword : AppCompatActivity(){
                 mAuth?.sendPasswordResetEmail(email)?.addOnCompleteListener { task ->
                     if (task.isSuccessful){
                         Toast.makeText(this@ForgotPassword,"Check email to reset your password!",Toast.LENGTH_SHORT ).show()
+                        val intent= Intent(this, ForgotPasswordSentEmail::class.java)
+                        startActivity(intent)
                     } else{
                         Toast.makeText(this@ForgotPassword,"Fail to send reset password email!!",Toast.LENGTH_SHORT ).show()
+                        val intent= Intent(this, Login::class.java)
+                        startActivity(intent)
                     }
                 }
             }
