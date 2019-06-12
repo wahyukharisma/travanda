@@ -112,15 +112,6 @@
                         android:textColor="@color/textBlack"
                         android:fontFamily="@font/proxima_nova"
                         android:textStyle="bold"/>
-                <TextView
-                        android:id="@+id/txt_signup"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="First time here ? Sign Up"
-                        android:textAlignment="textEnd"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginTop="5dp"
-                        android:clickable="true"/>
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent"
