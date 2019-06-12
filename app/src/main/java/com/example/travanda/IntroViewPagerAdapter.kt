@@ -40,4 +40,5 @@ class IntroViewPagerAdapter(val mListScreen: List<ScreenItem>):PagerAdapter(){
     override fun destroyItem(parent: ViewGroup, position: Int, `object`: Any) {
         parent.removeView(`object` as View)
     }
+
 }
