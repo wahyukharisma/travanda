@@ -1,5 +1,6 @@
 package com.example.travanda
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v4.view.PagerAdapter
@@ -36,6 +37,10 @@ class OnLanding : AppCompatActivity() {
                 pager.setCurrentItem(pager.getCurrentItem()+1)
             }
 
+        }
+        btn_get_started.setOnClickListener {
+            var intent= Intent(this, Homepage::class.java)
+            startActivity(intent)
         }
 
     }
