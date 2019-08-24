@@ -33,8 +33,9 @@ class Login : AppCompatActivity() {
                         if(fbUser!!.isEmailVerified)
                         {
                             Toast.makeText(this, "Successfully login!", Toast.LENGTH_SHORT).show()
-                            val intent = Intent(this, OnLanding::class.java)
+                            val intent = Intent(this, Homepage::class.java)
                             startActivity(intent)
+                            finish()
                         }
                         else{
                             fbUser.sendEmailVerification().addOnCompleteListener { task ->
