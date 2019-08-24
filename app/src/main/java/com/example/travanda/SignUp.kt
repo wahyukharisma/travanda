@@ -28,8 +28,8 @@ class SignUp : AppCompatActivity() {
             .addOnCompleteListener {
             if (!it.isSuccessful){
                 return@addOnCompleteListener
-                val intent=Intent(this,SignUp::class.java)
-                startActivity(intent)
+//                val intent=Intent(this,SignUp::class.java)
+//                startActivity(intent)
                 }
                 val userId= ref.push().key.toString()
                 ref.child(userId).setValue(user).addOnCompleteListener(){

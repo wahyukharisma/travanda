@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.FirebaseAuthException
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -27,10 +28,23 @@ class Login : AppCompatActivity() {
                     if(!it.isSuccessful){
                         return@addOnCompleteListener
                     }
-                    else
-                        Toast.makeText(this,"Successfully login!",Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this, OnLanding::class.java)
-                        startActivity(intent)
+                    else {
+                        val fbUser = FirebaseAuth.getInstance().currentUser
+                        if(fbUser!!.isEmailVerified)
+                        {
+                            Toast.makeText(this, "Successfully login!", Toast.LENGTH_SHORT).show()
+                            val intent = Intent(this, OnLanding::class.java)
+                            startActivity(intent)
+                        }
+                        else{
+                            fbUser.sendEmailVerification().addOnCompleteListener { task ->
+                                if (task.isSuccessful){
+                                    val intent= Intent(this, VerifyEmail::class.java)
+                                    startActivity(intent)
+                                }
+                            }
+                        }
+                    }
                 }
                 .addOnFailureListener {
                     Log.d("Login","FailedLogin:${it.message}")
